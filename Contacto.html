@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto></title>
+	<link rel="stylesheet" href="CSS/Estilo.css">
+</head>
+  
+<body>
+	<main class="main-content">
+	<header id="header">
+		<h1>Las Lolas <i class="fa-solid fa-heart fa-beat-fade" style="color: #cb57b2;"></i></h1>
+    </header> 
+
+	<h1 class="vamos" style="text-align:center">
+	<span style="color: black;">!VAMOS A</span>
+    </h1>
+	<h1 class="vamos"style="text-align:center;">
+		<span style="color: #A37AF8;">CONECTAR!</span>
+	</h1>
+
+	<div>
+		<span class="comunicate" style="color: black; ">Ya sea que tienes <strong> dudas</strong> sobre como comprar, o simplemente <strong>compartirme tu mensaje</strong>, puedes hacerlo llenando el siguiente formulario:</span>
+	</div>
+
+	<form action="" class="formulario" id="formulario">
+			<!--Nombre -->
+			<div class="formulario__grupo" id="grupo__nombre">
+				<label for="nombre" class="formulario__label">Nombre y Apellido</label>
+				<div class="formulario__grupo-input">
+					<input type="text"class="formulario__input"name="nombre"id="nombre"placeholder="Eloisa Arroyo"autocomplete="on">
+					<i class="formulario__validacion-estado fa-solid fa-circle-check"></i>
+				</div>
+				<p class="formulario__input-error">El nombre y apellido solo puede contener letras .</p>
+			</div>
+
+			<!--DNI -->
+			<div class="formulario__grupo" id="grupo__dni">
+				<label for="dni" class="formulario__label">DNI</label>
+				<div class="formulario__grupo-input">
+					<input type="text"class="formulario__input"name="dni"id="dni"placeholder="99999999 "autocomplete="on">
+					<i class="formulario__validacion-estado fa-solid fa-circle-check"></i>
+				</div>
+				<p class="formulario__input-error">El DNI solo puede contener números .</p>
+			</div>
+
+			<!-- Correo Electronico -->
+			<div class="formulario__grupo" id="grupo__correo">
+				<label for="correo" class="formulario__label">Correo Electrónico</label>
+				<div class="formulario__grupo-input">
+					<input type="email"class="formulario__input"name="correo"id="correo"placeholder="correo@correo.com"autocomplete="on">
+					<i class="formulario__validacion-estado fa-solid fa-envelope"></i>
+				</div>
+				<p class="formulario__input-error">La dirección de correo solo puede contener letras, numeros, puntos, guiones y guíon bajo.</p>
+			</div>
+
+			<!--Teléfono -->
+			<div class="formulario__grupo" id="grupo__telefono">
+				<label for="telefono" class="formulario__label">Teléfono</label>
+				<div class="formulario__grupo-input">
+					<input type="text"class="formulario__input"name="telefono"id="telefono"placeholder="1132608765"autocomplete="on">
+					<i class="formulario__validacion-estado fa-solid fa-square-phone"></i>
+				</div>
+				<p class="formulario__input-error">El telefono solo puede contener números y máximo 14 dígitos.</p>
+			</div>
+
+			<!--Mensaje -->
+			<div class="formulario__grupo" id="grupo__mensaje">
+				<label for="mensaje" class="formulario__label">Mensaje</label>
+				<div class="formulario__grupo-input">
+					<input type="text"class="formulario__input"name="mensaje"id="mensaje"placeholder="Escribe tu mensaje"autocomplete="off" maxlength="400">
+					<i class="formulario__validacion-estado fa-solid fa-comment"></i>
+				</div>
+				<p class="formulario__input-error">El mensaje debe tener máximo 400 caracteres.</p>
+			</div>
+
+			<!--Terminos y Condiciones -->
+			<div class="formulario__grupo" id="grupo__terminos">
+				<label class="formulario__label">
+					<input class="formulario__checkbox"type="checkbox"name="terminos"id="terminos">
+					Acepto los términos y condiciones
+				</label>
+			</div>
+
+			<div class="formulario__mensaje" id="formulario__mensaje">
+				<p><i class="fas fa-exclamation-triangle"></i><b>Error:</b> por favor completa el formulario correctamente. </p>
+			</div>
+
+			<div class="formulario__grupo formulario__grupo-btn-enviar">
+				<button type="submit" class="formulario__btn">Enviar</button>
+				<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!!</p>
+			</div>
+		</form>
+   
+        <section id="volver"> 
+            <div class="volver">
+            <a href="Index.html">Volver</a> 
+            </div>
+        </section>
+
+		<footer id="footer">
+            <div class="redes">
+                <a class="redes-icono" href="https://www.instagram.com/laslolashop/" title="Las Lolas Shop en Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a class="redes-icono" href="https://www.facebook.com/laslolashop/" title="Las Lolas Shop en Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a class="redes-icono" href="https://www.pinterest.com/laslolashop/" title="Las Lolas Shop en Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+            </div>
+               <p>
+                  Copyright 2023 - Derechos reservados
+               </p>
+         </footer>	
+	</main>
+	
+
+	<script src="js/formulario.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" crossorigin="anonymous"></script>
+</body>
+</html>
