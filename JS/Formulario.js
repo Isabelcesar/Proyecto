@@ -81,3 +81,33 @@ formulario.addEventListener('submit', (e) => {
 		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
 	}
 });
+
+//api de ropa 
+const express = require('express');
+const fs = require('fs');
+const app = express();
+const port = 3000; // puede ser otro puerto
+
+// Ruta para obtener la lista de imágenes de vestidos
+app.get('IMG/vestidos', (req, res) => {
+  // Lee el directorio de imágenes de vestidos
+  fs.readdir('IMG/vestidos', (err, files) => {
+    if (err) {
+      console.error(err);
+      return res.status(500).json({ error: 'Error al obtener la lista de vestidos.' });
+    }
+    const vestidos = files.map((filename) => `IMG/vestidos/${filename}`);
+    res.json({ vestidos });
+  });
+});
+
+// Ruta para obtener una imagen de vestido específica
+app.get('IMG/vestidos/:filename', (req, res) => {
+  const { filename } = req.params;
+  const filePath = `.IMG/vestidos/${filename}`;
+  res.sendFile(filePath, { root: __dirname });
+});
+
+app.listen(port, () => {
+  console.log(`API de vestidos en ejecución en http://localhost:${port}`);
+});
